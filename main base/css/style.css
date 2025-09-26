@@ -302,4 +302,8 @@ body {
 }
 .pojok-sains .custom-accor .accordion-item .accordion-header .custom-accor-button-2 {
   background-color: #00A652;
+}
+.pojok-sains .custom-accor .accordion-item .accor-picture {
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
