@@ -1,0 +1,426 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: SainsFont;
+    src: url(../fonts/GLOWWORM.TTF);
+}
+
+// Variabel 
+$bg-color: #F6F4F2;
+$yllow: #FEF102;
+$dffyllow: #F2941B;
+$brd: #EE1826;
+$grnn: #00A652;
+$ornge: #F05829;
+$bleu: #23AAE2;
+$pnk: #ED028D;
+$bold: #0000;
+
+// RESPONSIVE DESIGN
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// Font 
+$font-family: "Poppins", sans-serif;
+
+// START 
+body {
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 28px;
+    color: $bg-color;
+    background-color: $bg-color;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+// NAVBAR 
+.custom-navbar {
+    background-color: darken($bg-color, 2%) !important;
+
+    .navbar-brand {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        top: 2px;
+
+        img {
+            width: 75px;
+
+        }
+    }
+
+    .custom-navbar-nav {
+        li {
+            margin-right: 17px;
+
+            a {
+                font-weight: 600;
+                font-size: 17px;
+                color: black;
+                opacity: .5;
+                position: relative;
+                transition: .3s all ease;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 8px;
+                    right: 8px;
+                    background: $yllow;
+                    height: 5px;
+                    visibility: visible;
+                    width: 0;
+                    transition: .9s all ease-out;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    &:before {
+                        width: calc(100% - 16px);
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+// END NAVBAR 
+
+// HERO 
+.hero {
+    content: '';
+    position: absolute;
+    background-image: url('../assets/hero.png');
+    width: 100vw;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+    .container {
+        .title {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-right: 2rem;
+
+
+            h2 {
+                margin-top: 8rem;
+                font-size: 1.5rem;
+                font-weight: 400 !important;
+                margin-left: 40px;
+
+                strong {
+                    -webkit-text-stroke: 1px $ornge;
+                    font-size: 2rem;
+                }
+            }
+
+            h1 {
+                margin-top: -1rem;
+                margin-bottom: -1rem;
+
+                font-family: SainsFont;
+                font-size: 7rem;
+                -webkit-text-stroke: 1px #ffff;
+                color: white;
+                text-shadow:
+                    1px 1px 0 #ffff,
+                    -1px -1px 0 #ffff,
+                    1px -1px 0 #ffff,
+                    -1px 1px 0 #ffff;
+                letter-spacing: -20px;
+                -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, .8));
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .8));
+
+                .text-red {
+                    color: $brd;
+                }
+
+                .text-orange {
+                    color: $ornge;
+
+                }
+
+                .text-green {
+                    color: $grnn
+                }
+
+                .text-blue {
+                    color: $bleu;
+                }
+
+                .text-pink {
+                    color: $pnk;
+                }
+
+                .text-yellow {
+                    color: $dffyllow;
+                    margin-left: 15px;
+                }
+
+                //RED, GREEN, ORANGE, BLUE, PINK,YELLOW, PINK 
+
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-image: url('../assets/bubblegreen.svg');
+        width: 220px;
+        height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: floatImage 4s ease-in-out infinite;
+        right: 110px;
+        top: 15rem;
+
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-image: url('../assets/bubbleorange.svg');
+        width: 220px;
+        height: 200px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: floatImage2 4s ease-in-out infinite;
+        left: 85px;
+        top: 8rem;
+
+    }
+
+
+    @keyframes floatImage {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-1.9rem);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes floatImage2 {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(1.9rem);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+
+
+}
+
+//BTN
+.btn {
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: black;
+    background: $yllow;
+    border-radius: $yllow;
+    transition: .5s ease-in-out;
+
+    &:hover {
+        color: #fff;
+        background: $dffyllow;
+        border-radius: $dffyllow
+    }
+}
+
+// VISI MISI
+.visi-misi {
+    padding-top: 40rem;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 530px;
+        height: 400px;
+        background-image: url(../assets/photovisimisi.png);
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0;
+        left: 46.5rem;
+        padding: 0;
+    }
+
+    h2 {
+        font-weight: 700;
+        color: black;
+        margin-top: 2.5rem;
+        margin-right: 16rem;
+
+        .highlight {
+            background-color: $yllow;
+        }
+    }
+
+    .header-img {
+        img {
+            width: 25rem;
+        }
+
+    }
+
+    .custom-container {
+        width: 48rem;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+
+
+
+        .single {
+            padding: 0 4rem;
+            display: grid;
+            place-content: center;
+            width: 17rem;
+            position: relative;
+            overflow: hidden;
+            transition: 500ms ease-in-out width;
+
+            &:before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                transition: 500ms ease-in-out;
+            }
+
+
+            &:nth-child(1) {
+                background-color: $brd;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+            }
+
+            &:nth-child(2) {
+                background-color: $grnn;
+            }
+
+            &:nth-child(3) {
+                background-color: $pnk;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+            }
+
+            &:hover {
+                width: 60rem;
+
+                .content {
+                    transform: rotate(0);
+
+
+
+                    p {
+                        height: 100%;
+
+                    }
+                }
+            }
+
+            .content {
+                transform: rotate(-90deg);
+                transition: 200ms ease-in-out transform;
+
+
+                p {
+                    color: #ffff;
+                    padding: 0 !important;
+                    border: none;
+                    height: 0;
+                    overflow: hidden !important;
+                    transition: 500ms ease-in-out height,
+                        500ms ease-in-out padding;
+                    font-size: 16px;
+                    margin-bottom: 2rem;
+                }
+
+                h2 {
+                    text-align: center;
+                    color: white;
+                    text-shadow: 0 0 .3rem rgba(0, 0, 0, .1);
+                    margin-bottom: 1rem;
+                    padding-left: 7.5rem;
+                    transform: scale(2);
+                    transition: 500ms ease-in-out transform;
+                }
+            }
+
+        }
+    }
+}
+
+// POJOK SAINS 
+.pojok-sains {
+    padding-top: 8rem;
+
+    .section-title {
+        h2 {
+            color: black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: -20px;
+        }
+
+    }
+
+    .custom-accor {
+        padding: 4rem;
+
+        .accordion-item {
+            margin: 2rem;
+
+            .accordion-header {
+                .accordion-button {
+                     background-color: $yllow;
+                }
+
+                .custom-accor-button {
+                    background-color: $brd;
+                }
+                .custom-accor-button-2 {
+                    background-color: $grnn;
+                }
+            }
+        }
+    }
+}

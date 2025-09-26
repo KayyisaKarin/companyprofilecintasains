@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: SainsFont;
+  src: url(../fonts/GLOWWORM.TTF);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 28px;
+  color: #F6F4F2;
+  background-color: #F6F4F2;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.custom-navbar {
+  background-color: rgb(241.8272727273, 238.9, 235.9727272727) !important;
+}
+.custom-navbar .navbar-brand {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 2px;
+}
+.custom-navbar .navbar-brand img {
+  width: 75px;
+}
+.custom-navbar .custom-navbar-nav li {
+  margin-right: 17px;
+}
+.custom-navbar .custom-navbar-nav li a {
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+  opacity: 0.5;
+  position: relative;
+  transition: 0.3s all ease;
+}
+.custom-navbar .custom-navbar-nav li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  background: #FEF102;
+  height: 5px;
+  visibility: visible;
+  width: 0;
+  transition: 0.9s all ease-out;
+}
+.custom-navbar .custom-navbar-nav li a:hover {
+  opacity: 1;
+}
+.custom-navbar .custom-navbar-nav li a:hover:before {
+  width: calc(100% - 16px);
+}
+
+.hero {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/hero.png");
+  width: 100vw;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.hero .container .title {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+.hero .container .title h2 {
+  margin-top: 8rem;
+  font-size: 1.5rem;
+  font-weight: 400 !important;
+  margin-left: 40px;
+}
+.hero .container .title h2 strong {
+  -webkit-text-stroke: 1px #F05829;
+  font-size: 2rem;
+}
+.hero .container .title h1 {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  font-family: SainsFont;
+  font-size: 7rem;
+  -webkit-text-stroke: 1px white;
+  color: white;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white;
+  letter-spacing: -20px;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
+}
+.hero .container .title h1 .text-red {
+  color: #EE1826;
+}
+.hero .container .title h1 .text-orange {
+  color: #F05829;
+}
+.hero .container .title h1 .text-green {
+  color: #00A652;
+}
+.hero .container .title h1 .text-blue {
+  color: #23AAE2;
+}
+.hero .container .title h1 .text-pink {
+  color: #ED028D;
+}
+.hero .container .title h1 .text-yellow {
+  color: #F2941B;
+  margin-left: 15px;
+}
+.hero .container .title p {
+  font-size: 1.3rem;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/bubblegreen.svg");
+  width: 220px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatImage 4s ease-in-out infinite;
+  right: 110px;
+  top: 15rem;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/bubbleorange.svg");
+  width: 220px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatImage2 4s ease-in-out infinite;
+  left: 85px;
+  top: 8rem;
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.9rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floatImage2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.9rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: black;
+  background: #FEF102;
+  border-radius: #FEF102;
+  transition: 0.5s ease-in-out;
+}
+.btn:hover {
+  color: #fff;
+  background: #F2941B;
+  border-radius: #F2941B;
+}
+
+.visi-misi {
+  padding-top: 40rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+}
+.visi-misi:after {
+  content: "";
+  position: absolute;
+  width: 530px;
+  height: 400px;
+  background-image: url(../assets/photovisimisi.png);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  left: 46.5rem;
+  padding: 0;
+}
+.visi-misi h2 {
+  font-weight: 700;
+  color: black;
+  margin-top: 2.5rem;
+  margin-right: 16rem;
+}
+.visi-misi h2 .highlight {
+  background-color: #FEF102;
+}
+.visi-misi .header-img img {
+  width: 25rem;
+}
+.visi-misi .custom-container {
+  width: 48rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+.visi-misi .custom-container .single {
+  padding: 0 4rem;
+  display: grid;
+  place-content: center;
+  width: 17rem;
+  position: relative;
+  overflow: hidden;
+  transition: 500ms ease-in-out width;
+}
+.visi-misi .custom-container .single:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: 500ms ease-in-out;
+}
+.visi-misi .custom-container .single:nth-child(1) {
+  background-color: #EE1826;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.visi-misi .custom-container .single:nth-child(2) {
+  background-color: #00A652;
+}
+.visi-misi .custom-container .single:nth-child(3) {
+  background-color: #ED028D;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.visi-misi .custom-container .single:hover {
+  width: 60rem;
+}
+.visi-misi .custom-container .single:hover .content {
+  transform: rotate(0);
+}
+.visi-misi .custom-container .single:hover .content p {
+  height: 100%;
+}
+.visi-misi .custom-container .single .content {
+  transform: rotate(-90deg);
+  transition: 200ms ease-in-out transform;
+}
+.visi-misi .custom-container .single .content p {
+  color: white;
+  padding: 0 !important;
+  border: none;
+  height: 0;
+  overflow: hidden !important;
+  transition: 500ms ease-in-out height, 500ms ease-in-out padding;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+.visi-misi .custom-container .single .content h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding-left: 7.5rem;
+  transform: scale(2);
+  transition: 500ms ease-in-out transform;
+}
+
+.pojok-sains {
+  padding-top: 8rem;
+}
+.pojok-sains .section-title h2 {
+  color: black;
+  font-weight: 600;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: -20px;
+}
+.pojok-sains .custom-accor {
+  padding: 4rem;
+}
+.pojok-sains .custom-accor .accordion-item {
+  margin: 2rem;
+}
+.pojok-sains .custom-accor .accordion-item .accordion-header .accordion-button {
+  background-color: #FEF102;
+}
+.pojok-sains .custom-accor .accordion-item .accordion-header .custom-accor-button {
+  background-color: #EE1826;
+}
+.pojok-sains .custom-accor .accordion-item .accordion-header .custom-accor-button-2 {
+  background-color: #00A652;
+}/*# sourceMappingURL=style.css.map */
