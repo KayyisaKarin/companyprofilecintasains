@@ -8,6 +8,7 @@
 
 // Variabel 
 $bg-color: #F6F4F2;
+$bg-color-darker: #eae9e8;
 $yllow: #FEF102;
 $dffyllow: #F2941B;
 $brd: #EE1826;
@@ -263,6 +264,7 @@ body {
 // VISI MISI
 .visi-misi {
     padding-top: 40rem;
+    background-color: $bg-color-darker;
     box-sizing: border-box;
     display: grid;
     place-items: center;
@@ -391,6 +393,19 @@ body {
 // POJOK SAINS 
 .pojok-sains {
     padding-top: 8rem;
+    padding-bottom: 5rem !important;
+
+    .warung-sains {
+        padding-top: 12rem !important;
+        color: black !important;
+        font-weight: 600 !important;
+        font-size: 50px !important;
+        text-align: center !important;
+
+
+
+    }
+
 
     .section-title {
         h2 {
@@ -411,12 +426,13 @@ body {
 
             .accordion-header {
                 .accordion-button {
-                     background-color: $yllow;
+                    background-color: $yllow;
                 }
 
                 .custom-accor-button {
                     background-color: $brd;
                 }
+
                 .custom-accor-button-2 {
                     background-color: $grnn;
                 }
@@ -427,5 +443,374 @@ body {
                 height: 100px;
             }
         }
+    }
+}
+
+
+
+// SEKOLAH 
+.sekolah {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $bg-color-darker;
+
+    .title {
+        h1 {
+            color: black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        p {
+            color: black;
+            font-size: 16px;
+        }
+    }
+
+    display: grid;
+    place-items: center;
+
+    .slider {
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+
+        .logos {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slide 40s linear infinite;
+
+            img {
+                width: 110px;
+                margin: 0 25px;
+
+                @media (min-width: $md) {
+                    width: 70px;
+                    margin: 0 20px;
+                }
+
+                @media (min-width: $sm) {
+                    width: 55px;
+                    margin: 0 15px;
+                }
+            }
+
+            @keyframes slide {
+                from {
+                    transform: translateX(0%);
+                }
+
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+        }
+
+    }
+}
+
+// TESTIMONIAL 
+.Testimonial {
+    padding-top: 4rem;
+
+    .title {
+        h2 {
+            color: black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+        }
+    }
+
+    .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .carousel {
+            width: 90%;
+            height: fit-content;
+            background: $bg-color;
+            border-radius: 2mm;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+            font-weight: 600;
+
+            .title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0 20px;
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+
+            .navigation {
+                position: absolute;
+                top: 0;
+                left: -20px;
+                height: 100%;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:nth-child(4) {
+                    left: calc(100% - 20px);
+                }
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: rgb(77, 77, 77);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    transition: .3s all ease-in-out;
+
+                    span {
+                        font-size: 20px;
+                        justify-content: center;
+                        text-align: center;
+                        color: white;
+                    }
+
+                    &:hover {
+                        background: $ornge;
+                    }
+                }
+            }
+
+            .slide-lock {
+                width: 900px;
+                max-width: 100%;
+                overflow: hidden;
+                min-width: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                padding: 15px;
+                scroll-behavior: smooth;
+
+                .slides {
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 15px;
+
+                    .slide {
+                        width: 250px;
+                        height: 250px;
+                        border: 0.5mm solid rgb(228, 228, 228);
+                        box-shadow: 10px 10px 0 rgb(228, 228, 228);
+                        border-radius: 1mm;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        box-sizing: border-box;
+                        padding: 5px;
+                        transition: 0.25s all ease-in-out;
+                        margin: 5px 25px;
+
+                        &:nth-child(1) {
+                            background: url(../assets/accordion1.png);
+                        }
+                        &:nth-child(2) {
+                            background: url(../assets/accordion1.png);
+                        }
+                        &:nth-child(3) {
+                            background: url(../assets/accordion1.png);
+                        }
+                        &:nth-child(4) {
+                            background: url(../assets/accordion1.png);
+                        }
+                        &:nth-child(5) {
+                            background: url(../assets/accordion1.png);
+                        }
+                        &:nth-child(6) {
+                            background: url(../assets/accordion1.png);
+                        }
+
+                        &:hover {
+                            border: 0.5mm solid rgb(40, 40, 40);
+                            box-shadow: 12px 12px 0 rgb(40, 40, 40);
+
+                            .button button {
+                                background: rgb(16, 116, 215);
+                            }
+                        }
+
+                        .content {
+                            flex-grow: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: poppins;
+                            font-size: 26px;
+                            font-weight: 500;
+                            color: rgb(16, 116, 215);
+                        }
+
+                        .button {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            box-sizing: border-box;
+                            padding: 5px;
+
+                            button {
+                                background: rgb(77, 77, 77);
+                                color: white;
+                                font-family: poppins;
+                                outline: none;
+                                border: none;
+                                padding: 5px 20px;
+                                border-radius: 4mm;
+                                cursor: pointer;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+// KONTAK 
+.Kontak {
+    .title {
+        h2 {
+            color: black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+        }
+    }
+}
+
+// FOOTER 
+
+.footer-section {
+    padding: 80px 0;
+    background: white;
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: .3s all ease;
+
+        &:hover {
+            color: rgba(black, .5);
+        }
+    }
+
+    .sofa-img {
+        position: absolute;
+        top: -200px;
+        right: 0;
+        z-index: 1;
+
+        img {
+            max-width: 380px;
+        }
+    }
+
+    .subscription-form {
+        margin-bottom: 40px;
+        position: relative;
+        margin-top: 100px;
+        z-index: 2;
+
+        h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: $yllow;
+        }
+
+        .form-control {
+            height: 50px;
+            border-radius: 10px;
+            font-family: $font-family;
+
+            &:active,
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: $yllow;
+                box-shadow: 0 1px 4px 0 rgba(black, .2);
+            }
+        }
+
+        .btn {
+            border-radius: 10px !important;
+        }
+    }
+
+    .links-wrap {
+        ul {
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer-logo-wrap {
+        .footer-logo {
+            font-size: 32px;
+            text-decoration: none;
+            font-weight: 500;
+            color: $yllow ;
+        }
+    }
+
+    .custom-social {
+        li {
+            display: inline-block;
+            margin: 2px;
+
+            a {
+                height: 40px;
+                width: 40px;
+                background: white;
+                text-align: center;
+                line-height: 40px;
+                display: inline-block;
+                border-radius: 50%;
+                color: $yllow;
+                transition: .5s all ease;
+
+                &:hover {
+                    background: $yllow;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .border-top {
+        border-color: white;
     }
 }
