@@ -270,24 +270,11 @@ body {
     place-items: center;
     min-height: 100%;
 
-    &:after {
-        content: '';
-        position: absolute;
-        width: 530px;
-        height: 400px;
-        background-image: url(../assets/photovisimisi.png);
-        background-position: right;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: 0;
-        left: 46.5rem;
-        padding: 0;
-    }
 
     h2 {
         font-weight: 700;
         color: black;
-        margin-top: 2.5rem;
+        margin-top: 50px;
         margin-right: 16rem;
 
         .highlight {
@@ -395,57 +382,115 @@ body {
     padding-top: 8rem;
     padding-bottom: 5rem !important;
 
-    .warung-sains {
-        padding-top: 12rem !important;
-        color: black !important;
-        font-weight: 600 !important;
-        font-size: 50px !important;
-        text-align: center !important;
-
-
-
-    }
-
-
     .section-title {
         h2 {
             color: black;
             font-weight: 600;
             font-size: 50px;
             text-align: center;
-            margin-bottom: -20px;
+            margin-bottom: -10px;
         }
 
     }
 
-    .custom-accor {
-        padding: 4rem;
+    .center {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        .accordion-item {
-            margin: 2rem;
+        .slider {
+            width: 100%;
+            height: fit-content;
+            padding: 70px 0;
+            overflow: auto;
 
-            .accordion-header {
-                .accordion-button {
-                    background-color: $yllow;
-                }
-
-                .custom-accor-button {
-                    background-color: $brd;
-                }
-
-                .custom-accor-button-2 {
-                    background-color: $grnn;
-                }
+            &::-webkit-scrollbar {
+                width: 100%;
+                height: 5px;
             }
 
-            .accor-picture {
-                width: 100px;
-                height: 100px;
+            &::-webkit-scrollbar-thumb {
+                background: $pnk;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: white;
+            }
+
+            .cards {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                .card {
+                    width: 300px;
+                    height: 300px;
+                    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.14);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    margin: 0 20px;
+
+                    &:nth-child(1){
+                        background-image: url(../assets/kegiatan/image.png);
+                    }
+                    &:nth-child(2){
+                        background-image: url(../assets/kegiatan/image2.png);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(3){
+                        background-image: url(../assets/kegiatan/image3.png);
+                        background-repeat: no-repeat;
+                        background-position: right;
+                    }
+                    &:nth-child(4){
+                        background-image: url(../assets/kegiatan/image4.png);background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    &:nth-child(5){
+                        background-image: url(../assets/kegiatan/image5.png);
+                    }
+                    &:nth-child(6){
+                        background-image: url(../assets/kegiatan/image6.png);
+                    }
+                    &:nth-child(7){
+                        background-image: url(../assets/kegiatan/image7.png);
+                    }
+                    &:nth-child(8){
+                        background-image: url(../assets/kegiatan/image8.png);
+                    }
+                    &:nth-child(9){
+                        background-image: url(../assets/kegiatan/image9.png);
+                    }
+                    &:nth-child(10){
+                        background-image: url(../assets/kegiatan/image10.png);
+                    }
+
+                    .title {
+                        font-size: 40px;
+                        font-weight: 600;
+                    }
+
+                    .subtitle {
+                        font-size: 14px;
+                    }
+
+                }
             }
         }
     }
+
 }
-
 
 
 // SEKOLAH 
@@ -515,6 +560,7 @@ body {
 // TESTIMONIAL 
 .Testimonial {
     padding-top: 4rem;
+    padding-bottom: 4rem;
 
     .title {
         h2 {
@@ -522,6 +568,9 @@ body {
             font-weight: 600;
             font-size: 50px;
             text-align: center;
+            text-decoration: underline;
+            text-decoration-color: $bleu;
+            text-decoration-thickness: 10px;
         }
     }
 
@@ -630,62 +679,76 @@ body {
                         transition: 0.25s all ease-in-out;
                         margin: 5px 25px;
 
+
                         &:nth-child(1) {
-                            background: url(../assets/accordion1.png);
-                        }
-                        &:nth-child(2) {
-                            background: url(../assets/accordion1.png);
-                        }
-                        &:nth-child(3) {
-                            background: url(../assets/accordion1.png);
-                        }
-                        &:nth-child(4) {
-                            background: url(../assets/accordion1.png);
-                        }
-                        &:nth-child(5) {
-                            background: url(../assets/accordion1.png);
-                        }
-                        &:nth-child(6) {
-                            background: url(../assets/accordion1.png);
-                        }
+                            background: url(../assets/Testimoni/testimoni6.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
 
-                        &:hover {
-                            border: 0.5mm solid rgb(40, 40, 40);
-                            box-shadow: 12px 12px 0 rgb(40, 40, 40);
-
-                            .button button {
-                                background: rgb(16, 116, 215);
+                            &:hover {
+                                border: 0.5mm solid $pnk;
+                                box-shadow: 12px 12px 0 $pnk;
                             }
                         }
 
-                        .content {
-                            flex-grow: 1;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-family: poppins;
-                            font-size: 26px;
-                            font-weight: 500;
-                            color: rgb(16, 116, 215);
+                        &:nth-child(2) {
+                            background: url(../assets/Testimoni/testimoni1.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                            &:hover {
+                                border: 0.5mm solid $grnn;
+                                box-shadow: 12px 12px 0 $grnn
+                            }
                         }
 
-                        .button {
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: flex-end;
-                            box-sizing: border-box;
-                            padding: 5px;
+                        &:nth-child(3) {
+                            background: url(../assets/Testimoni/testimoni2.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
 
-                            button {
-                                background: rgb(77, 77, 77);
-                                color: white;
-                                font-family: poppins;
-                                outline: none;
-                                border: none;
-                                padding: 5px 20px;
-                                border-radius: 4mm;
-                                cursor: pointer;
+                            &:hover {
+                                border: 0.5mm solid $brd;
+                                box-shadow: 12px 12px 0 $brd;
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            background: url(../assets/Testimoni/testimoni3.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                            &:hover {
+                                border: 0.5mm solid $bleu;
+                                box-shadow: 12px 12px 0 $bleu;
+                            }
+                        }
+
+                        &:nth-child(5) {
+                            background: url(../assets/Testimoni/testimoni4.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                            &:hover {
+                                border: 0.5mm solid $yllow;
+                                box-shadow: 12px 12px 0 $yllow;
+                            }
+                        }
+
+                        &:nth-child(6) {
+                            background: url(../assets/Testimoni/testimoni5.png);
+                            background-position: center;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+
+                            &:hover {
+                                border: 0.5mm solid $ornge;
+                                box-shadow: 12px 12px 0 $ornge;
                             }
                         }
 
@@ -701,12 +764,57 @@ body {
 
 // KONTAK 
 .Kontak {
+    content: '';
+    position: absolute;
+    background-image: url('../assets/kontakbgs.png');
+    width: 100vw;
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
     .title {
         h2 {
-            color: black;
-            font-weight: 600;
+            color: white;
+            font-weight: 700;
             font-size: 50px;
             text-align: center;
+            margin-top: 4rem;
+            -webkit-text-stroke: 1px black;
+            text-shadow:
+                1px 1px 0 #0000,
+                -1px -1px 0 #0000,
+                1px -1px 0 #0000,
+                -1px 1px 0 #0000;
+            -webkit-filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, .8));
+            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .8));
+
+        }
+    }
+
+
+
+    .custom-form {
+        margin: 2rem 8rem 5rem 8rem;
+        background-color: $bg-color-darker;
+        border-radius: 30px;
+
+        .top-form {
+            margin-top: 2rem;
+        }
+
+        .custom-input {
+            padding: 0 25px 0 25px;
+        }
+
+        .form-label {
+            color: black;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .button-form {
+            padding: 0 20px 20px 20px;
         }
     }
 }
@@ -714,8 +822,11 @@ body {
 // FOOTER 
 
 .footer-section {
-    padding: 80px 0;
+    padding-top: 50rem;
+    padding-bottom: 2rem;
     background: white;
+    color: black;
+
 
     a {
         text-decoration: none;
@@ -727,62 +838,32 @@ body {
         }
     }
 
-    .sofa-img {
-        position: absolute;
-        top: -200px;
-        right: 0;
-        z-index: 1;
-
-        img {
-            max-width: 380px;
-        }
+    .btn {
+        border-radius: 10px !important;
     }
 
-    .subscription-form {
-        margin-bottom: 40px;
-        position: relative;
-        margin-top: 100px;
-        z-index: 2;
-
-        h3 {
-            font-size: 18px;
-            font-weight: 500;
-            color: $yllow;
-        }
-
-        .form-control {
-            height: 50px;
-            border-radius: 10px;
-            font-family: $font-family;
-
-            &:active,
-            &:focus {
-                outline: none;
-                box-shadow: none;
-                border-color: $yllow;
-                box-shadow: 0 1px 4px 0 rgba(black, .2);
-            }
-        }
-
-        .btn {
-            border-radius: 10px !important;
-        }
-    }
 
     .links-wrap {
+
         ul {
             li {
                 margin-bottom: 10px;
+
+                .list-title {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
             }
         }
     }
 
     .footer-logo-wrap {
         .footer-logo {
-            font-size: 32px;
-            text-decoration: none;
-            font-weight: 500;
-            color: $yllow ;
+            img {
+                width: 95px;
+                height: 95px;
+            }
+
         }
     }
 
@@ -792,11 +873,11 @@ body {
             margin: 2px;
 
             a {
-                height: 40px;
-                width: 40px;
-                background: white;
+                height: 50px;
+                width: 50px;
+                background: black;
                 text-align: center;
-                line-height: 40px;
+                line-height: 50px;
                 display: inline-block;
                 border-radius: 50%;
                 color: $yllow;
@@ -810,7 +891,4 @@ body {
         }
     }
 
-    .border-top {
-        border-color: white;
-    }
 }
