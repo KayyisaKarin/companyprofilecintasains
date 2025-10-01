@@ -110,6 +110,10 @@ body {
     margin: 0;
     padding: 0;
 
+    @media (min-width: $xxl) {
+        height: 85%;
+    }
+
 
     .container {
         .title {

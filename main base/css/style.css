@@ -68,6 +68,11 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (min-width: 1400px) {
+  .hero {
+    height: 85%;
+  }
+}
 .hero .container .title {
   justify-content: center;
   text-align: center;
