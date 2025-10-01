@@ -128,13 +128,20 @@ body {
   background-repeat: no-repeat;
   animation: floatImage 4s ease-in-out infinite;
   right: 110px;
-  top: 15rem;
+  top: 13.5rem;
 }
 @media (max-width: 768px) {
   .hero:after {
     width: 150px;
     top: 20.9rem;
     right: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero:after {
+    width: 170px;
+    top: 14rem;
+    right: 50px;
   }
 }
 .hero:before {
@@ -154,6 +161,13 @@ body {
     width: 150px;
     top: 3.9rem;
     left: 24px;
+  }
+}
+@media (max-width: 1200px) {
+  .hero:before {
+    width: 160px;
+    top: 7rem;
+    left: 40px;
   }
 }
 @keyframes floatImage {
