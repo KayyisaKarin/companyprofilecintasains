@@ -110,6 +110,7 @@ body {
     margin: 0;
     padding: 0;
 
+
     .container {
         .title {
             justify-content: center;
@@ -124,9 +125,18 @@ body {
                 font-weight: 400 !important;
                 margin-left: 40px;
 
+                @media (max-width: $md) {
+                    font-size: 1.3rem;
+                }
+
                 strong {
                     -webkit-text-stroke: 1px $ornge;
                     font-size: 2rem;
+
+                    @media (max-width: $md) {
+                        font-size: 1.5rem;
+                    }
+
                 }
             }
 
@@ -149,10 +159,20 @@ body {
 
                 //RED, GREEN, ORANGE, BLUE, PINK,YELLOW, PINK 
 
+                @media (max-width: $md) {
+                    font-size: 6rem;
+                }
+
             }
 
             p {
                 font-size: 1.3rem;
+
+
+                @media (max-width: $md) {
+                    font-size: 1rem;
+                }
+
             }
         }
     }
@@ -169,6 +189,14 @@ body {
         right: 110px;
         top: 15rem;
 
+
+        @media (max-width: $md) {
+            width: 150px;
+            top: 20.9rem;
+            right: 30px;
+        }
+
+
     }
 
     &:before {
@@ -182,6 +210,12 @@ body {
         animation: floatImage2 4s ease-in-out infinite;
         left: 85px;
         top: 8rem;
+
+        @media (max-width: $md) {
+            width: 150px;
+            top: 3.9rem;
+            left: 24px;
+        }
 
     }
 
@@ -267,7 +301,7 @@ body {
 // VISI MISI
 .visi-misi {
     padding-top: 38rem;
-    background: url(../assets/goals.png) ;
+    background: url(../assets/goals.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 2rem;
@@ -283,14 +317,14 @@ body {
         justify-content: center;
         align-items: center;
         font-size: 80px;
-         -webkit-text-stroke: 3px white;
+        -webkit-text-stroke: 3px white;
 
         span {
             font-family: SainsFont;
             color: $dffyllow;
             font-size: 90px;
             font-weight: 500;
-         -webkit-text-stroke: 2px white;
+            -webkit-text-stroke: 2px white;
 
         }
     }
@@ -310,6 +344,10 @@ body {
         display: flex;
         justify-content: center;
         position: relative;
+
+        @media (max-width: $md) {
+            padding: 0 6rem 0 6rem;
+        }
 
 
 
@@ -409,6 +447,7 @@ body {
             text-align: center;
             margin-bottom: 3px;
         }
+
         p {
             color: black;
             font-size: 15px;
@@ -437,12 +476,13 @@ body {
                 font-size: 65px;
                 font-weight: 400;
 
-                
+
 
             }
+
             .text-yellow {
-                    margin-left: -.15rem;
-                }
+                margin-left: -.15rem;
+            }
         }
 
     }
@@ -572,7 +612,7 @@ body {
         }
     }
 
-    
+
 
 }
 
@@ -616,12 +656,12 @@ body {
                 width: 110px;
                 margin: 0 25px;
 
-                @media (min-width: $md) {
+                @media (max-width: $md) {
                     width: 70px;
                     margin: 0 20px;
                 }
 
-                @media (min-width: $sm) {
+                @media (max-width: $sm) {
                     width: 55px;
                     margin: 0 15px;
                 }
@@ -647,7 +687,7 @@ body {
     padding-bottom: 4rem;
 
     .title {
-        
+
         h2 {
             color: $brd;
             font-weight: 500;
@@ -862,6 +902,7 @@ body {
 
 // KONTAK 
 .Kontak {
+
     content: '';
     position: absolute;
     background-image: url('../assets/kontakbgs.png');
@@ -897,24 +938,45 @@ body {
         background-color: $bg-color-darker;
         border-radius: 30px;
 
-        
+
+        @media (max-width: $md) {
+            margin: 1.5rem 3rem 1.5rem 3rem;
+
+        }
+
 
         .top-form {
             margin-top: 2rem;
+
+            
+                @media (max-width: $md) {
+                    margin-top: 1rem;
+
+                }
         }
 
         .custom-input {
             padding: 0 25px 0 25px;
-            &:focus {
-            outline: none;
-        }
+
+
+            .form-label {
+                color: black;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            .form-control {
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 1px 4px 0 rgba($yllow, .2);
+                    border-color: $yllow;
+                }
+            }
+
+
         }
 
-        .form-label {
-            color: black;
-            font-weight: 500;
-            font-size: 15px;
-        }
+
 
         .button-form {
             padding: 0 20px 20px 20px;
