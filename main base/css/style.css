@@ -68,7 +68,7 @@ body {
   margin: 0;
   padding: 0;
 }
-@media (min-width: 1400px) {
+@media (max-width: 1400px) {
   .hero {
     height: 85%;
   }
@@ -271,6 +271,7 @@ body {
   width: 48rem;
   height: 20rem;
   display: flex;
+  margin-top: 2rem;
   justify-content: center;
   position: relative;
 }

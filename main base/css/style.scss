@@ -110,7 +110,7 @@ body {
     margin: 0;
     padding: 0;
 
-    @media (min-width: $xxl) {
+    @media (max-width: $xxl) {
         height: 85%;
     }
 
@@ -357,6 +357,7 @@ body {
         width: 48rem;
         height: 20rem;
         display: flex;
+        margin-top: 2rem;
         justify-content: center;
         position: relative;
 
