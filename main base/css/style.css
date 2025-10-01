@@ -95,25 +95,6 @@ body {
   letter-spacing: -20px;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
 }
-.hero .container .title h1 .text-red {
-  color: #EE1826;
-}
-.hero .container .title h1 .text-orange {
-  color: #F05829;
-}
-.hero .container .title h1 .text-green {
-  color: #00A652;
-}
-.hero .container .title h1 .text-blue {
-  color: #23AAE2;
-}
-.hero .container .title h1 .text-pink {
-  color: #ED028D;
-}
-.hero .container .title h1 .text-yellow {
-  color: #F2941B;
-  margin-left: 15px;
-}
 .hero .container .title p {
   font-size: 1.3rem;
 }
@@ -179,31 +160,66 @@ body {
   border-radius: #F2941B;
 }
 
+.text-red {
+  color: #EE1826;
+}
+
+.text-orange {
+  color: #F05829;
+}
+
+.text-green {
+  color: #00A652;
+}
+
+.text-blue {
+  color: #23AAE2;
+}
+
+.text-pink {
+  color: #ED028D;
+}
+
+.text-yellow {
+  color: #F2941B;
+  margin-left: 15px;
+}
+
 .visi-misi {
-  padding-top: 40rem;
-  background-color: #eae9e8;
-  box-sizing: border-box;
-  display: grid;
+  padding-top: 38rem;
+  background: url(../assets/goals.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
   place-items: center;
   min-height: 100%;
 }
-.visi-misi h2 {
+.visi-misi .section-title {
   font-weight: 700;
   color: black;
-  margin-top: 50px;
-  margin-right: 16rem;
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  -webkit-text-stroke: 3px white;
 }
-.visi-misi h2 .highlight {
-  background-color: #FEF102;
+.visi-misi .section-title span {
+  font-family: SainsFont;
+  color: #F2941B;
+  font-size: 90px;
+  font-weight: 500;
+  -webkit-text-stroke: 2px white;
 }
 .visi-misi .header-img img {
   width: 25rem;
 }
 .visi-misi .custom-container {
+  box-sizing: border-box;
   width: 48rem;
   height: 20rem;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .visi-misi .custom-container .single {
   padding: 0 4rem;
@@ -248,7 +264,7 @@ body {
 }
 .visi-misi .custom-container .single .content p {
   color: white;
-  padding: 0 !important;
+  padding: 0;
   border: none;
   height: 0;
   overflow: hidden !important;
@@ -261,9 +277,32 @@ body {
   color: white;
   text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  margin-right: 16rem;
   padding-left: 7.5rem;
   transform: scale(2);
   transition: 500ms ease-in-out transform;
+}
+.visi-misi .box {
+  background-color: white;
+  border-radius: 2rem;
+  margin: 10px 1.5rem 3rem 1.5rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+.visi-misi .box h2 {
+  color: black;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.visi-misi .box p {
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 1rem 0.25rem 1rem;
 }
 
 .pojok-sains {
@@ -272,10 +311,19 @@ body {
 }
 .pojok-sains .section-title h2 {
   color: black;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 50px;
   text-align: center;
   margin-bottom: -10px;
+}
+.pojok-sains .section-title h2 span {
+  font-family: SainsFont;
+  letter-spacing: -15px;
+  font-size: 65px;
+  font-weight: 400;
+}
+.pojok-sains .section-title h2 .text-yellow {
+  margin-left: -0.15rem;
 }
 .pojok-sains .center {
   width: 100%;
@@ -342,21 +390,39 @@ body {
 }
 .pojok-sains .center .slider .cards .card:nth-child(5) {
   background-image: url(../assets/kegiatan/image5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card:nth-child(6) {
   background-image: url(../assets/kegiatan/image6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card:nth-child(7) {
   background-image: url(../assets/kegiatan/image7.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card:nth-child(8) {
   background-image: url(../assets/kegiatan/image8.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card:nth-child(9) {
   background-image: url(../assets/kegiatan/image9.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card:nth-child(10) {
   background-image: url(../assets/kegiatan/image10.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .pojok-sains .center .slider .cards .card .title {
   font-size: 40px;
@@ -427,13 +493,12 @@ body {
   padding-bottom: 4rem;
 }
 .Testimonial .title h2 {
-  color: black;
-  font-weight: 600;
-  font-size: 50px;
+  color: #EE1826;
+  font-weight: 500;
+  font-size: 65px;
   text-align: center;
-  text-decoration: underline;
-  text-decoration-color: #23AAE2;
-  text-decoration-thickness: 10px;
+  letter-spacing: 1px;
+  font-family: SainsFont;
 }
 .Testimonial .center {
   width: 100%;
@@ -588,7 +653,7 @@ body {
   box-shadow: 12px 12px 0 #FEF102;
 }
 .Testimonial .center .carousel .slide-lock .slides .slide:nth-child(6) {
-  background: url(../assets/Testimoni/testimoni5.png);
+  background: url(../assets/Testimoni/testimoni6.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -596,6 +661,16 @@ body {
 .Testimonial .center .carousel .slide-lock .slides .slide:nth-child(6):hover {
   border: 0.5mm solid #F05829;
   box-shadow: 12px 12px 0 #F05829;
+}
+.Testimonial .center .carousel .slide-lock .slides .slide:nth-child(7) {
+  background: url(../assets/Testimoni/testimoni7.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Testimonial .center .carousel .slide-lock .slides .slide:nth-child(7):hover {
+  border: 0.5mm solid #F05829;
+  box-shadow: 12px 12px 0 #F2941B;
 }
 
 .Kontak {
@@ -628,6 +703,9 @@ body {
 }
 .Kontak .custom-form .custom-input {
   padding: 0 25px 0 25px;
+}
+.Kontak .custom-form .custom-input:focus {
+  outline: none;
 }
 .Kontak .custom-form .form-label {
   color: black;
